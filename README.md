@@ -8,7 +8,9 @@ What we need is to have Kali Linux and, for ethical reasons, a DHCP server that 
 ## How to attack
 
 First we install yersinia with this command.
-```sudo apt install yersinia```
+```
+sudo apt install yersinia
+```
 
 ![install](/img/install.png)
 
@@ -16,11 +18,19 @@ Before we execute yersinia, we need to make sure that we have connection to the 
 
 ![conection](/img/connect.png)
 
-After making sure we have connection, we will run Yersinia in graphical mode with the command ```yersinia -I```, and execute it.
+After making sure we have connection, we will run Yersinia in graphical mode with the command 
+```
+yersinia -I
+```
+and execute it.
 
 (In graphical mode, we need to press space and F2 to change the attack mode, since yersinia have multiple attacks, we select DHCP mode, and them we press X that runs a new window, that displays what type of package we are going to send to te server as an attack)
 
 ![Attack](/img/attack.png)
 
 ### How to check out if it works?
-Run the command ```journalctl -u isc-dhcp-server.service```, and then check on the server to see if it is receiving all those Discover packets.
+Run the command 
+```
+journalctl -u isc-dhcp-server.service
+```
+and then check on the server to see if it is receiving all those Discover packets.
